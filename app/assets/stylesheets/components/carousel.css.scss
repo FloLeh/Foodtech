@@ -1,5 +1,6 @@
 .carousel_panorama {
   display: flex;
+  width: 200%;
 }
 
 .carousel1 {
@@ -8,7 +9,7 @@
 }
 
 .item {
-  padding: 50px 60px;
+  padding: 20px 60px;
 }
 
 .item_image img {
@@ -21,7 +22,7 @@
   opacity: 0.6;
   width: 100px;
   position: absolute;
-  top: 950px;
+  top: 930px;
   left: 950px;
   cursor: pointer;
   z-index: 1000;
@@ -32,10 +33,25 @@
   opacity: 0.6;
   width: 100px;
   position: absolute;
-  top: 950px;
+  top: 930px;
   left: 220px;
   transform:rotate(180deg);
   cursor: pointer;
   z-index: 1000;
   transition: opacity ease-in 0.2s;
+}
+
+.buttons {
+  position: absolute;
+  left: 48%;
+}
+
+.btn_carousel {
+  transition: transform ease-in 0.2s;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 100%;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: rgba(0,0,0,0.1);
+  cursor: pointer;
 }

@@ -1,45 +1,50 @@
-<nav class="tabs">
-  <%= image_tag 'food.jpg', class: 'food' %>
-  <div class="content">
-    <ul class="labels">
-      <li class="pres-lab">Présentation</li>
-      <li class="menu-lab">Menu</li>
-      <li class="team-lab">L'équipe</li>
-    </ul>
-    <div class="pres">
-      This is a presentation.
+  <nav class="tabs">
+    <%= image_tag 'food.jpg', class: 'food' %>
+    <div class="content">
+      <ul class="labels">
+        <li class="pres-lab">Présentation</li>
+        <li class="menu-lab">Menu</li>
+        <li class="team-lab">L'équipe</li>
+      </ul>
+      <div class="pres">
+        This is a presentation.
+      </div>
+      <div class="menu">
+        <p>Le menu n'affiche que des spécialités italiennes préparées par nos meilleurs cuistots.</p>
+      </div>
+      <div class="team">
+        <p>Considérée comme la mafia de la pizza,</p>
+        <p>notre équipe préfère néanmoins faire tourner la pâte plutôt que le révolver.</p>
+      </div>
     </div>
-    <div class="menu">
-      <p>Le menu n'affiche que des spécialités italiennes préparées par nos meilleurs cuistots.</p>
-    </div>
-    <div class="team">
-      <p>Considérée comme la mafia de la pizza,</p>
-      <p>notre équipe préfère néanmoins faire tourner la pâte plutôt que le révolver.</p>
-    </div>
-  </div>
-</nav>
+  </nav>
 
-<div class="container">
-  <div class="carousel1">
-    <div class="carousel_panorama">
+  <div class="container">
+    <div class="carousel1">
+      <div class="carousel_panorama">
 
-      <div class="item">
-        <div class="item_image">
-          <%= image_tag 'pasta.jpg' %>
+        <div class="item">
+          <div class="item_image">
+            <%= image_tag 'pasta.jpg' %>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="item_image">
-          <%= image_tag 'pizza2.jpg' %>
+        <div class="item">
+          <div class="item_image">
+            <%= image_tag 'pizza2.jpg' %>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="item_image">
-          <%= image_tag 'salade.jpg' %>
+        <div class="item">
+          <div class="item_image">
+            <%= image_tag 'salade.jpg' %>
+          </div>
         </div>
       </div>
     </div>
+    <div class="buttons">
+      <button type="button" name="" class="btn_carousel"></button>
+      <button type="button" name="" class="btn_carousel"></button>
+      <button type="button" name="" class="btn_carousel"></button>
+    </div>
+    <%= image_tag 'arrow.png', class: 'arrow_right' %>
+    <%= image_tag 'arrow.png', class: 'arrow_left' %>
   </div>
-  <%= image_tag 'arrow.png', class: 'arrow_right' %>
-  <%= image_tag 'arrow.png', class: 'arrow_left' %>
-</div>

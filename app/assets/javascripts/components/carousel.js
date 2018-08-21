@@ -1,29 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
   let i = 1;
-  let j = 3;
   let widthWindow = $(window).width()-350;
-  $(' .arrow_left ').css({'opacity':'0'})
+
+  btnUpscale = function(element) {
+    element.css({'transform':'scale(1.3)','background-color':'rgba(0,0,0,0.9)'})
+  }
+
+  btnDownscale = function(element) {
+    element.css({'transform':'scale(1)','background-color':'rgba(0,0,0,0.1)'})
+  }
+
+  btnUpscale($('.btn_carousel:nth-child('+i+')'))
+
   $(' .arrow_right ').click(function(){
-    $(' .arrow_left ').css({'opacity':'0.6'})
+    btnDownscale($('.btn_carousel'))
+
     if (i < 3){
       $(' .carousel1 ').css({'transform':'translateX(-'+widthWindow*i+'px)'})
       i++;
       console.log(i);
-      if (i == 3) {
-        $(' .arrow_right ').css({'opacity':'0'})
-      }
     }
+    else {
+      $(' .carousel1 ').css({'transform':'translateX(0px)'})
+      i = 1
+    }
+    btnUpscale($('.btn_carousel:nth-child('+i+')'))
   })
+
   $(' .arrow_left ').click(function(){
-    $(' .arrow_right ').css({'opacity':'0.6'})
+    btnDownscale($('.btn_carousel'))
+
     if (i > 1){
       i--;
       $(' .carousel1 ').css({'transform':'translateX(-'+widthWindow*(i-1)+'px)'})
       console.log(i);
-      if (i == 1) {
-        $(' .arrow_left ').css({'opacity':'0'})
-      }
     }
-
+    else {
+      i = 3
+      $(' .carousel1 ').css({'transform':'translateX(-'+widthWindow*(i-1)+'px)'})
+    }
+    btnUpscale($('.btn_carousel:nth-child('+i+')'))
   })
+
+  $(' .btn_carousel ').click(function(){
+    btnDownscale($(' .btn_carousel '))
+    $(this).css({'transform':'scale(1.3)','background-color':'rgba(0,0,0,0.9)'})
+    i = $(this).index('.container .btn_carousel')+1
+    $(' .carousel1 ').css({'transform':'translateX(-'+widthWindow*(i-1)+'px)'})
+  })
+
 })
