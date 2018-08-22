@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   let i = 1;
-  let widthWindow = $(window).width()-350;
+  let widthWindow = 950;
 
   btnUpscale = function(element) {
     element.css({'transform':'scale(1.3)','background-color':'rgba(0,0,0,0.9)'})
